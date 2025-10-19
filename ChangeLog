@@ -1,3 +1,9 @@
+Sun Oct 19 20:37:23 2025  Pedro Melo  <melo@simplicidade.org>
+
+	* fix errors on build (via patch RT #21177)
+	* fix for RT #124815
+	* include RT #20942
+
 Sun Oct 17 20:50:57 2004  Loic Dachary  <loic@gnu.org>
 
 	* release 1.08 (based on unac-1.8.0)

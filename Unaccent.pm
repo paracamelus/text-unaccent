@@ -27,7 +27,7 @@ require DynaLoader;
 @EXPORT = qw(
   unac_string unac_string_utf16 unac_version unac_debug
 );
-$VERSION = '1.08';
+$VERSION = '1.09_01';
 
 bootstrap Text::Unaccent $VERSION;
 
