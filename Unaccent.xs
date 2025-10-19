@@ -101,9 +101,11 @@ perl_unac_version()
 	OUTPUT:
 		RETVAL
 
+#ifdef UNAC_DEBUG_AVAILABLE
 void
 perl_unac_debug(in)
 	int in
 	PROTOTYPE: $
 	CODE:
 	        unac_debug_callback(in, unac_debug_print, NULL);
+#endif
