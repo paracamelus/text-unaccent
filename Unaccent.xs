@@ -35,7 +35,7 @@
 #include "unac.h"
 
 static char* buffer;
-static int buffer_length;
+static size_t buffer_length;
 
 static void unac_debug_print(const char* message, void* data)
 {
