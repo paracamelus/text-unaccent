@@ -23,9 +23,9 @@ use vars qw($VERSION @ISA @EXPORT);
 require Exporter;
 require DynaLoader;
 
-@ISA = qw(Exporter DynaLoader);
+@ISA    = qw(Exporter DynaLoader);
 @EXPORT = qw(
-unac_string unac_string_utf16 unac_version unac_debug
+  unac_string unac_string_utf16 unac_version unac_debug
 );
 $VERSION = '1.08';
 
@@ -51,8 +51,7 @@ Text::Unaccent - Remove accents from a string
 
 Text::Unaccent is a module that remove accents from a string.
 C<unac_string> converts the input string from the
-specified  charset to UTF-16 and call 
-C<unac_string_utf16> to
+specified charset to UTF-16 and call C<unac_string_utf16> to
 return the unaccented equivalent. The conversion from  and
 to  UTF-16  is  done  with iconv(1).
 
@@ -88,12 +87,19 @@ Set the debug level. Messages are printed on stderr.
 Possible debug levels are:
 
 =over 4
+
 =item $Text::Unaccent::DEBUG_NONE
+
 Silent.
+
 =item $Text::Unaccent::DEBUG_LOW
+
 Human readable messsages.
+
 =item $Text::Unaccent::DEBUG_HIGH
+
 Detailed and very verbose information.
+
 =back 
 
 =back 
