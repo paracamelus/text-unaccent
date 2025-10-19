@@ -65,7 +65,7 @@ perl_unac_string(charset,in)
 	PROTOTYPE: $$
 	CODE:
 		STRLEN in_length;
-		in_length = SvCUR(ST(1));
+		in_length = (SvPOK(ST(1)) ? SvCUR(ST(1)) : 0);
 		if(unac_string(charset,
 			       in, in_length,
 			       &buffer, &buffer_length) == 0) {
@@ -83,7 +83,7 @@ perl_unac_string_utf16(in)
 	PROTOTYPE: $
 	CODE:
 		STRLEN in_length;
-		in_length = SvCUR(ST(0));
+		in_length = (SvPOK(ST(1)) ? SvCUR(ST(1)) : 0);
 		if(unac_string_utf16(in, in_length,
 				     &buffer, &buffer_length) == 0) {
 	          RETVAL = newSVpv(buffer, buffer_length);
